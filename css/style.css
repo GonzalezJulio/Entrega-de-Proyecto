@@ -5,11 +5,11 @@
 /*normalize*/
 :root {
     /*colors*/
-    --primary: #f3a8c2;
-    --secondary: #f6d1de;
-    --terteary: #f74fd0;
-    --quaternary: #a2a0a1;
-    --alternative: #75c2f9;
+    --primary: #eab8e3;
+    --secondary: #f4f4f8;
+    --terteary: #da85af;
+    --quaternary: #c3b9e3;
+    --alternative: #e5d4de;
     --text-color: #c5c6c8;
     /*spacings*/
      --spacing-large: 6rem;
@@ -90,7 +90,16 @@ body {
 #carousel{
     margin-top: 100px;
 }
-
+/*Menucard*/
+.menucard {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.cardx{
+    flex: 25%;
+    padding: 5px;
+}
 /*Nosotras*/
 .nosotras{
     margin-top: 200px;
@@ -161,6 +170,10 @@ body {
 .sugerencias{
     margin-top: 100px;
 }
+.compras{
+    background-color: var(--alternative);
+    margin-top: 200px;
+}
 
 .compras__boos{
     margin-top: 200px;
@@ -168,9 +181,20 @@ body {
     justify-content: space-around;
     
 }
+.btn {
+    background-color: var(--terteary);
+    justify-content: flex-end;
+
+}
+.instagram {
+    background-color: var(--alternative);
+
+}
 
 .pagos{
     background-color: var(--alternative);
+    padding: 10px;
+    margin-top: 10px;
 
 }
 .pagos img{
