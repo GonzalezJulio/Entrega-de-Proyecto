@@ -1,0 +1,62 @@
+/*head*/
+.superior {
+   background-color: aquamarine;
+   height: 20px;
+   display: flex;
+   justify-content: space-around;
+}
+
+.logohead {
+   background-color: $--primary;
+   width: 2fr;
+
+   & img {
+      width: 360px;
+      height: 80px;
+   }
+}
+
+.navbar {
+   background-color: $--primary;
+   margin-top: 5px;
+
+}
+
+
+
+
+.presentacion {
+   margin-top: 200px;
+
+   & h1 {
+      font-size: $--text-base;
+      font-family: $--font-principal;
+      color: $--text-color;
+      text-align: center;
+
+   }
+
+   & p {
+      font-size: $--text-small;
+      font-family: $--font-principal;
+      color: $--text-color;
+      text-align: center;
+   }
+}
+
+/*carusel*/
+#carousel {
+   margin-top: 100px;
+}
+
+/*Menucard*/
+.menucard {
+   display: flex;
+   padding: 5px;
+   flex-wrap: wrap;
+
+   & cardx {
+      flex: 25%;
+      padding: 5px;
+   }
+}

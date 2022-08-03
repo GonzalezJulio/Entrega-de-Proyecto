@@ -1,0 +1,39 @@
+@media screen and (max-width: 1000px) {
+    .compras__boos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap:$--spacing-small;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .logo__img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .compras__boos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .logo__img {
+        width: 30px;
+        height: 30px;
+    }
+
+}

@@ -1,0 +1,24 @@
+
+
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+hmtl {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $--secondary;
+    font-family: $--font-principal;
+    
+
+}
