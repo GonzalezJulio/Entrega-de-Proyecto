@@ -44,19 +44,4 @@
    }
 }
 
-/*carusel*/
-#carousel {
-   margin-top: 100px;
-}
 
-/*Menucard*/
-.menucard {
-   display: flex;
-   padding: 5px;
-   flex-wrap: wrap;
-
-   & cardx {
-      flex: 25%;
-      padding: 5px;
-   }
-}
