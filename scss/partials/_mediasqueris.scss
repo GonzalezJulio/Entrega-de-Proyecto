@@ -1,17 +1,23 @@
 @media screen and (max-width: 1000px) {
     .compras__boos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 1fr);
+        @include grid (repeat(2, 1fr), repeat(1,1fr), none, none);
         gap:$--spacing-small;
     }
 
 }
 
+@media screen and (max-width:860px) {
+    .menucard{
+        padding: 5px;
+        @include flex( none, none,none, space-around )
+    }
+     
+    
+}
+
 @media screen and (max-width: 780px) {
     .gallery {
-        display: flex;
-        flex-direction: column;
+      @include flex(none, column, none, none)
     }
 }
 
@@ -22,9 +28,9 @@
     }
 
     .compras__boos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex (none, column, center, none)
+        
+        
 
     }
 
