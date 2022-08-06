@@ -59,8 +59,11 @@ body {
 
 /*home*/
 /*Nosotras*/
-.nosotras {
-  margin-top: 200px; }
+.comocomprar {
+  margin-top: 200px;
+  font-family: "kanit", sans-serif;
+  font-size: 1.6em;
+  text-align: center; }
 
 /*carusel*/
 #carousel {
