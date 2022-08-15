@@ -40,9 +40,6 @@ body {
     width: 360px;
     height: 80px; }
 
-.logohead2 {
-  display: none; }
-
 .navbar {
   background-color: #eab8e3;
   margin-top: 5px; }
@@ -207,15 +204,17 @@ body {
     justify-content: none; } }
 
 @media screen and (max-width: 580px) {
-  .logohead {
-    display: none; }
-  .logohead2 {
-    display: flex; }
-    .logohead2img {
-      width: 50px;
-      height: 50px; } }
+  .logohead img {
+    width: 260px;
+    height: 60px; } }
 
 @media screen and (max-width: 480px) {
-  .logo__img {
-    width: 30px;
-    height: 30px; } }
+  .logohead img {
+    width: 180px;
+    height: 40px; }
+  .productos {
+    display: flex;
+    flex-wrap: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: none; } }

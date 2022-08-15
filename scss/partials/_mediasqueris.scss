@@ -1,24 +1,24 @@
 @media screen and (max-width: 1000px) {
     .compras__boos {
-        @include grid (repeat(2, 1fr), repeat(1,1fr), none, none);
-        gap:$--spacing-small;
+        @include grid (repeat(2, 1fr), repeat(1, 1fr), none, none);
+        gap: $--spacing-small;
     }
-    
+
 
 }
 
 @media screen and (max-width:860px) {
-    .menucard{
+    .menucard {
         padding: 5px;
-        @include flex( none, none,none, space-around )
+        @include flex(none, none, none, space-around)
     }
-     
-    
+
+
 }
 
 @media screen and (max-width: 780px) {
     .gallery {
-      @include flex(none, column, none, none)
+        @include flex(none, column, none, none)
     }
 }
 
@@ -30,30 +30,29 @@
 
     .compras__boos {
         @include flex (none, column, center, none)
-        
-        
-
     }
 
 }
-@media screen and (max-width: 580px) { 
-    .logohead {
-        display: none;
+
+@media screen and (max-width: 580px) {
+    .logohead img {
+        width:260px ;
+        height: 60px;
+        
     }
-    .logohead2 {
-        display: flex;
-        &img {
-            width: 50px;
-            height: 50px;
-        }
-    }
+
+    
+
+
 }
 
 @media screen and (max-width:480px) {
-    
-    .logo__img {
-        width: 30px;
-        height: 30px;
+    .logohead img {
+        width: 180px;
+        height: 40px;
     }
 
+    .productos {
+        @include flex( none, column, center, none)
+    }
 }
