@@ -4,6 +4,7 @@
     flex-direction: $direction;
     align-items: $align;
     justify-content: $justify;
+    
 }
 
 @mixin grid ( $column, $row, $autorow, $autoflow) {
@@ -13,5 +14,7 @@
     grid-auto-rows: $autorow;
     grid-auto-flow: $autoflow;
 }
+
+
 
 

@@ -40,6 +40,9 @@ body {
     width: 360px;
     height: 80px; }
 
+.logohead2 {
+  display: none; }
+
 .navbar {
   background-color: #eab8e3;
   margin-top: 5px; }
@@ -85,15 +88,14 @@ body {
 .productos {
   margin-top: 200px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-template-rows: repeat(100px, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  grid-template-rows: repeat(100px, auto);
   grid-auto-rows: none;
   grid-auto-flow: dense;
   gap: 2rem;
   padding: 20px; }
 
 .flip-card {
-  margin-top: 200px;
   background-color: transparent;
   width: 250px;
   height: 300px;
@@ -203,6 +205,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: none; } }
+
+@media screen and (max-width: 580px) {
+  .logohead {
+    display: none; }
+  .logohead2 {
+    display: flex; }
+    .logohead2img {
+      width: 50px;
+      height: 50px; } }
 
 @media screen and (max-width: 480px) {
   .logo__img {

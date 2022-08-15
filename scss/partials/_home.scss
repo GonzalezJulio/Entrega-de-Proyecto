@@ -25,13 +25,13 @@
 /*productos*/
 .productos {
     margin-top: 200px;
-    @include grid (repeat(auto-fill, minmax(220px, 1fr)), repeat(100px, 1fr), none, dense);
+    @include grid (repeat(auto-fill, minmax(220px, auto)), repeat(100px, auto), none, dense);
     gap: 2rem;
     padding: 20px;
     }
 
     .flip-card {
-        margin-top: 200px;
+        
         background-color: transparent;
         width: 250px;
         height: 300px;
@@ -93,6 +93,7 @@
 
     .sugerencias {
         margin-top: 100px;
+
     }
 
     .compras {
