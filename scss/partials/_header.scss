@@ -2,8 +2,8 @@
 .superior {
    background-color: aquamarine;
    height: 20px;
-   display: flex;
-   justify-content: space-around;
+   @include flex (none, none, none, space-around)
+   
 }
 
 .logohead {
