@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <!--Css externo-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <!-- Modal Javascript css -->
+        <link rel="stylesheet" href="../css/modal.css">
         <!--Css Propio-->
         <link rel="stylesheet" href="../css/style.css">
     </head>
@@ -64,9 +66,8 @@
                                     <a class="nav-link active" href="../view/compras.html">Compras</a>
                                 </li>
                                 <li class="nav-item">
-                                    <!-- <button class="nav-link text-body " id="open" href="#">Carrito<span id="contador-carrito">0</span> </a> -->
-                                    <button type="button" class="nav-link text-body" id="open">Primary<span id="contador-carrito">0</span></button>
-                                </li>
+                                
+                                    <button class="nav-link text-body " id="open" href="#">Carrito <i class="fa-solid fa-cart-shopping"></i> <span id="contador-carrito">0</span></a>
 
                             </ul>
                             <form class="d-flex " role="search">
@@ -108,8 +109,8 @@
         
 <!--productos-->
         <main id="producto-contenedor">
-            <div class="modal-container" id="modal-container">
-                <div class="modal-carrito" id="modal-carrito">
+            <div  class="modal-conteiner" id="modal-conteiner">
+                <div  class="modal-carrito" id="modal-carrito">
                     <h3>Carrito</h3>
                     <button id="cerrar">Cerrar</button>
                     <div id="carrito-contenedor"></div>

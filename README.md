@@ -10,6 +10,7 @@
     <li>CSS</li>
     <li>SASS</li>
     <li>BOOTSTRAP</li>
+    <li>JAVASCRIPT</li>
     
     
 </ul>
