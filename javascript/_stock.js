@@ -1,6 +1,6 @@
 const productos = [
     {
-        id:1,
+        id: 1,
         nombre:"Vaso Unicornio",
         desc:"Vaso",
         precio:3400,
@@ -8,7 +8,7 @@ const productos = [
         cantidad:1
     },
     {
-        id:2,
+        id: 2,
         nombre:"Set de Mate",
         desc:"Mate",
         precio:2590,
@@ -94,6 +94,8 @@ const productos = [
         precio:890,
         img:'../assest/img/varios4.JPG',
         cantidad:1
-    },
+    }
 
-]
+];
+
+export { productos };

@@ -1,9 +1,12 @@
+import { validarArticuloRepetido } from "./_accionesCarrito.js";
+
+
 const mostrarArticulos = (productos) => {
-    const almacenamientoArticulos = document.getElementById ('producto-contenedor')
-    productos.forEach(producto =>{
+    const almacenamientoArticulos = document.getElementById ("producto-contenedor");
+    productos.forEach(producto => {
         const div = document.createElement('div');
         div.classList.add('card');
-        div.innerHTML = `<div class="card" style="width: 18rem;">
+        div.innerHTML += `<div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="${producto.img}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">${producto.nombre}</h5>
@@ -15,11 +18,11 @@ const mostrarArticulos = (productos) => {
         almacenamientoArticulos.appendChild(div)
 
         const boton = document.getElementById(`boton${producto.id}`);
-        boton.addEventListener(`click`, () => {
-            carritoCompras(producto.id)
-            alert(`Se agrego el articulo ${producto.nombre} a tu compra`)
+        boton.addEventListener('click', () => {
+            validarArticuloRepetido(producto.id);
+            
         })
-    })
-}
+    });
+};
 
-mostrarArticulos(productos)
+export { mostrarArticulos };
