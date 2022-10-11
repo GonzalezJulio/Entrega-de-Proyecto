@@ -1,10 +1,1 @@
 /* Card proyecto1*/
-/* <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="${producto.img}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text">${producto.desc}</p>
-                                <p class="card-text">$ ${producto.precio}</p>
-                                <button type="button" class="btn btn-outline-primary" id="boton${producto.id}">Comprar</button>
-                            </div>
-                        </div> */

@@ -3,17 +3,18 @@ import { validarArticuloRepetido } from "./_accionesCarrito.js";
 
 const mostrarArticulos = (productos) => {
     const almacenamientoArticulos = document.getElementById ("producto-contenedor");
+    
     productos.forEach(producto => {
         const div = document.createElement('div');
         div.classList.add('card');
-        div.innerHTML += `<div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="${producto.img}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text">${producto.desc}</p>
-                                <p class="card-text">$ ${producto.precio}</p>
-                                <button type="button" class="btn btn-outline-primary" id="boton${producto.id}">Comprar</button>
-                            </div>
+        div.innerHTML += `<div class="card-image">
+                            <img src=${producto.img}>
+                            <span class="card1-title">${producto.nombre}</span>
+                            <a class="btn-floating halfway-fab wabes-effect waves-light red" id=boton${producto.id}><i class="material-icons">add_shopping_cart</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p class="pepe">${producto.desc}</p>
+                            <p class="pepe">${producto.precio}</p>
                         </div>`
         almacenamientoArticulos.appendChild(div)
 
@@ -24,5 +25,7 @@ const mostrarArticulos = (productos) => {
         })
     });
 };
+
+
 
 export { mostrarArticulos };
