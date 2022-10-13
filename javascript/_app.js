@@ -3,6 +3,13 @@ import { validarArticuloRepetido } from "./_accionesCarrito.js";
 
 const mostrarArticulos = (productos) => {
     const almacenamientoArticulos = document.getElementById ("producto-contenedor");
+    almacenamientoArticulos.addEventListener('click', () =>{
+        Toastify({
+            text: 'Agrego un producto al Carrito',
+            duration: 3000,
+            
+        }).showToast();
+    })
     
     productos.forEach(producto => {
         const div = document.createElement('div');
@@ -17,12 +24,14 @@ const mostrarArticulos = (productos) => {
                             <p class="pepe">${producto.precio}</p>
                         </div>`
         almacenamientoArticulos.appendChild(div)
+        
 
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener('click', () => {
             validarArticuloRepetido(producto.id);
             
         })
+
     });
 };
 
