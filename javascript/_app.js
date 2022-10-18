@@ -3,9 +3,9 @@ import { obtenerArticulos } from "./_obtenerProductos.js";
 
 const mostrarArticulos = async () => {
     
-    const productos = await obtenerArticulos();
-    
     const almacenamientoArticulos = document.getElementById ("producto-contenedor");
+    
+    const productos = await obtenerArticulos();
     
     
     almacenamientoArticulos.addEventListener('click', () =>{
