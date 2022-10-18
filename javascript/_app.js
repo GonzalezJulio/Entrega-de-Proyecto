@@ -1,8 +1,13 @@
 import { validarArticuloRepetido } from "./_accionesCarrito.js";
+import { obtenerArticulos } from "./_obtenerProductos.js";
 
-
-const mostrarArticulos = (productos) => {
+const mostrarArticulos = async () => {
+    
+    const productos = await obtenerArticulos();
+    
     const almacenamientoArticulos = document.getElementById ("producto-contenedor");
+    
+    
     almacenamientoArticulos.addEventListener('click', () =>{
         Toastify({
             text: 'Agrego un producto al Carrito',
