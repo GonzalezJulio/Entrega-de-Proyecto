@@ -1,4 +1,4 @@
-const productos = 
+/* const productos = 
 [
     {
         id: 1,
@@ -97,4 +97,4 @@ const productos =
         cantidad:1
     }
 ];
-export { productos };
+export { productos }; */
