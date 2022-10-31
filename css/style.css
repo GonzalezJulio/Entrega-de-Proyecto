@@ -96,10 +96,14 @@ body {
   gap: 2rem;
   padding: 20px; }
 
-.sugerencias {
-  margin-top: 100px; }
+.btn {
+  background-color: #da85af; }
 
-.compras {
+.sugerencias {
+  margin-top: 120px;
+  padding: 20px; }
+
+.card_compras {
   background-color: #e5d4de;
   margin-top: 150px; }
 

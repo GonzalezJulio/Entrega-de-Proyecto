@@ -33,15 +33,10 @@ const agregarAlCarrito = async (productoId) => {
 
     const div = document.createElement('div');
     div.classList.add('articuloCarrito');
-    div.innerHTML = `<div class="card">
-    <h5 class="card-header">${producto.nombre}</h5>
-    <div class="card-body">
-      <h5 class="card-title">${producto.precio}</h5>
-      <p id=cantidad${producto.id} class="card-text">${producto.cantidad}</p>
-      <button id=eliminar${producto.id} value='${producto.id}' class='btn wavea-effect waves-light boton-eliminar'>X</button>
-    </div>
-  </div>
-                     `;
+    div.innerHTML = `<p class="pepe">${producto.nombre}</p>
+    <p class="pepe">Precio: ${producto.precio}</p>
+    <p id=cantidad${producto.id} class="pepe">Cantidad: ${producto.cantidad}</p>
+    <button id=eliminar${producto.id} value='${producto.id}' class='btn waves-effect waves-ligth boton-eliminar'>X</button>`;
     contenedor.appendChild(div);
     actualizarTotalCarrito(carrito);
 };

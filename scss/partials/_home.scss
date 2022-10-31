@@ -29,12 +29,15 @@
     padding: 20px;
 }
 
-
+.btn {
+    background-color: $--terteary;
+}
 .sugerencias {
-    margin-top: 100px;
+    margin-top: 120px;
+    padding: 20px;
 
 }
-.compras {
+.card_compras {
     background-color:$--alternative;
     margin-top: 150px;
 }
