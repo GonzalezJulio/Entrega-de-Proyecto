@@ -8,5 +8,9 @@ const obtenerCarritoStorage = () => {
         return carritoStorage;
 };
 
+/* const borrarCarritoStorage = () => {
+    const carritoStorage = JSON.remove(localStorage.removeItem('carrito'));
+    return carritoStorage;
+} */
 
-export { guardarCarritoStorage, obtenerCarritoStorage};
+export { guardarCarritoStorage, obtenerCarritoStorage, borrarCarritoStorage};

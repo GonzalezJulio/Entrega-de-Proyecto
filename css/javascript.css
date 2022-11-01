@@ -140,3 +140,16 @@ select {
 .boton-eliminar:focus {
   outline: none;
 }
+
+#compra-realizada {
+  background-color: green;
+  color: black;
+  border: none;
+  font-size: 20px;
+}
+#compra-realizada:hover {
+  cursor: pointer;
+}
+#compra-realizada:focus {
+  outline: none;
+}

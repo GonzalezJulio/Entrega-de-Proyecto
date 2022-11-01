@@ -1,11 +1,12 @@
-import { eliminarArticuloCarrito } from "./_accionesCarrito.js";
+
+import { ejecutarCompra, eliminarArticuloCarrito } from "./_accionesCarrito.js";
 
 
 const modalContenedor = document.querySelector(".modal-contenedor");
 const abrirCarrito = document.getElementById('cesta-carrito');
 const cerrarCarrito = document.getElementById('btn-cerrar-carrito');
 const modalCarrito = document.querySelector(".modal-carrito");
-const realizarVenta = document.getElementById('compra-realizada');
+const comprar = document.getElementById(".compra-realizada");
 
 
 
@@ -21,6 +22,31 @@ cerrarCarrito.addEventListener("click", () => {
 modalContenedor.addEventListener("click", () => {
     cerrarCarrito.click()
 })
+
+comprar.addEventListener("submit", () => {
+    comprar.submit()
+    if (e.target.classList.contains('compra-realizada')) {
+        Swal.fire({
+            title: 'ud desea',
+            text: 'Finalizar su compra?',
+            icon: 'warning',
+            showCancelButton: true,
+            corfirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                ejecutarCompra(e.target.value)
+                Swal.fire(
+                    'Su compra',
+                    'ha sido reliazda con exito',
+                    'success',
+                )
+            }
+        });
+    };
+});
 
 modalCarrito.addEventListener("click", (e) => {
     e.stopPropagation();

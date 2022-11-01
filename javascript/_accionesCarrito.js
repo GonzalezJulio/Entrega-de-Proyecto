@@ -1,6 +1,6 @@
 import { actualizarTotalCarrito } from './_actualizarCarrito.js';
 import { obtenerArticulos } from './_obtenerProductos.js';
-import { obtenerCarritoStorage } from './storage.js';
+import { borrarCarritoStorage, obtenerCarritoStorage } from './storage.js';
 
 
 let carrito = [];
@@ -66,4 +66,13 @@ const eliminarArticuloCarrito = (productoId) => {
     actualizarTotalCarrito(carritoActualizado);
     pintarCarrito(carritoActualizado);
 }
-export { agregarAlCarrito, validarArticuloRepetido, pintarCarrito, eliminarArticuloCarrito};
+
+/* const ejecutarCompra = (productoId) => {
+    const carritoStorage = borrarCarritoStorage();
+    const carritoActualizado = carritoStorage.remove(producto => producto.id != productoId);
+
+    actualizarTotalCarrito(carritoActualizado);
+    pintarCarrito(carritoActualizado);
+} */
+
+export { agregarAlCarrito, validarArticuloRepetido, pintarCarrito, eliminarArticuloCarrito, ejecutarCompra};
