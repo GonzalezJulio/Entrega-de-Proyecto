@@ -1,9 +1,16 @@
 import { actualizarTotalCarrito } from './_actualizarCarrito.js';
 import { obtenerArticulos } from './_obtenerProductos.js';
-import { borrarCarritoStorage, obtenerCarritoStorage } from './storage.js';
+import { obtenerCarritoStorage } from './storage.js';
 
+const comprarCarrito = document.getElementById('comprar-carrito');
 
 let carrito = [];
+
+comprarCarrito.addEventListener('click', () => {
+    carrito.length = 0
+    pintarCarrito();
+});
+
 
 
 const validarArticuloRepetido = (productoId) => {
@@ -67,12 +74,6 @@ const eliminarArticuloCarrito = (productoId) => {
     pintarCarrito(carritoActualizado);
 }
 
-/* const ejecutarCompra = (productoId) => {
-    const carritoStorage = borrarCarritoStorage();
-    const carritoActualizado = carritoStorage.remove(producto => producto.id != productoId);
 
-    actualizarTotalCarrito(carritoActualizado);
-    pintarCarrito(carritoActualizado);
-} */
 
-export { agregarAlCarrito, validarArticuloRepetido, pintarCarrito, eliminarArticuloCarrito, ejecutarCompra};
+export { agregarAlCarrito, validarArticuloRepetido, pintarCarrito, eliminarArticuloCarrito, carrito };

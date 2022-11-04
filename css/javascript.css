@@ -77,7 +77,7 @@ select {
 }
   
 .modal-active .modal-carrito {
-  margin-top: 0;
+  margin-top: 200px;
 }
   
 .modal-carrito h3 {
@@ -141,15 +141,20 @@ select {
   outline: none;
 }
 
-#compra-realizada {
-  background-color: green;
-  color: black;
+#boton-carrito {
   border: none;
-  font-size: 20px;
+  color:#da85da;
+  font-size: 40px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px 20px;
+  transition: all .3s;
 }
-#compra-realizada:hover {
+#boton-carrito:hover {
   cursor: pointer;
+  color: white;
+  background-color: #da85da;
 }
-#compra-realizada:focus {
+#boton-carrito:focus {
   outline: none;
 }
