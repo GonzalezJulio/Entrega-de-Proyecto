@@ -42,4 +42,5 @@ const mostrarArticulos = async () => {
 
 
 
-export { mostrarArticulos };
+export { mostrarArticulos }; 
+

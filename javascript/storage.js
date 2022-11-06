@@ -4,7 +4,7 @@ const guardarCarritoStorage = (carritoDeCompras) => {
 ;}
 
 const obtenerCarritoStorage = () => {
-        const carritoStorage = JSON.parse(localStorage.getItem('carrito'));
+        const carritoStorage = JSON.parse(localStorage.getItem('carrito')) || [];
         return carritoStorage;
 };
 

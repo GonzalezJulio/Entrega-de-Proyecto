@@ -7,8 +7,9 @@ const comprarCarrito = document.getElementById('comprar-carrito');
 let carrito = [];
 
 comprarCarrito.addEventListener('click', () => {
-    carrito.length = 0
+    carrito.length = []
     pintarCarrito();
+    
 });
 
 
@@ -76,4 +77,4 @@ const eliminarArticuloCarrito = (productoId) => {
 
 
 
-export { agregarAlCarrito, validarArticuloRepetido, pintarCarrito, eliminarArticuloCarrito, carrito };
+export { agregarAlCarrito, validarArticuloRepetido, pintarCarrito, eliminarArticuloCarrito};

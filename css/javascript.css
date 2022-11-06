@@ -152,7 +152,7 @@ select {
 }
 #boton-carrito:hover {
   cursor: pointer;
-  color: white;
+  color: #f4f4f8;
   background-color: #da85da;
 }
 #boton-carrito:focus {
