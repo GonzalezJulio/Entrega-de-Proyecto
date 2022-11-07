@@ -5,12 +5,15 @@ import { obtenerCarritoStorage } from './storage.js';
 const comprarCarrito = document.getElementById('comprar-carrito');
 
 let carrito = [];
+ 
 
-comprarCarrito.addEventListener('click', () => {
-    carrito.length = []
+if (comprarCarrito) {
+    comprarCarrito.addEventListener('click', () => {
+    carrito.length = [];
     pintarCarrito();
     
 });
+}
 
 
 

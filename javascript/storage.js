@@ -1,5 +1,5 @@
-const guardarCarritoStorage = (carritoDeCompras) => {
-    localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
+const guardarCarritoStorage = (carrito) => {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
     
 ;}
 
