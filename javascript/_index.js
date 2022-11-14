@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')) {
         const carrito = obtenerCarritoStorage();
         pintarCarrito(carrito);
-        actualizarTotalCarrito(carrito);
-    };
+         actualizarTotalCarrito(carrito);
+    }
 });

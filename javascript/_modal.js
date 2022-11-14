@@ -3,11 +3,11 @@ import { eliminarArticuloCarrito } from "./_accionesCarrito.js";
 
 
 
+
 const modalContenedor = document.querySelector(".modal-contenedor");
 const abrirCarrito = document.getElementById('cesta-carrito');
 const cerrarCarrito = document.getElementById('btn-cerrar-carrito');
 const modalCarrito = document.querySelector(".modal-carrito");
-
 
 
 abrirCarrito.addEventListener("click", () => {
@@ -22,6 +22,8 @@ cerrarCarrito.addEventListener("click", () => {
 modalContenedor.addEventListener("click", () => {
     cerrarCarrito.click()
 })
+
+
 
 
 

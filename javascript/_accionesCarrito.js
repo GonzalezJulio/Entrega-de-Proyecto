@@ -2,29 +2,27 @@ import { actualizarTotalCarrito } from './_actualizarCarrito.js';
 import { obtenerArticulos } from './_obtenerProductos.js';
 import { obtenerCarritoStorage } from './storage.js';
 
-const comprarCarrito = document.getElementById('comprar-carrito');
 
+const vaciarCarrito = document.querySelector("#comprar-carrito");
 let carrito = [];
  
-
-if (comprarCarrito) {
-    comprarCarrito.addEventListener('click', () => {
+vaciarCarrito.addEventListener("click", () => {
     carrito.length = [];
-    pintarCarrito();
+    pintarCarrito(actualizarTotalCarrito(carrito));
     
-});
-}
+})
 
 
 
-const validarArticuloRepetido = (productoId) => {
-    
-    if(localStorage.getItem('carrito')) {
+
+function validarArticuloRepetido(productoId) {
+
+    if (localStorage.getItem('carrito')) {
         carrito = obtenerCarritoStorage();
     }
     const articuloRepetido = carrito.find(producto => producto.id === productoId);
 
-    if(articuloRepetido) {
+    if (articuloRepetido) {
         articuloRepetido.cantidad++;
         const cantidadArticulo = document.getElementById(`cantidad${articuloRepetido.id}`);
         cantidadArticulo.innerText = `cantidad: ${articuloRepetido.cantidad}`;
@@ -33,7 +31,7 @@ const validarArticuloRepetido = (productoId) => {
         agregarAlCarrito(productoId);
     }
 
-};
+}
 
 
 const agregarAlCarrito = async (productoId) => {
@@ -73,11 +71,17 @@ const pintarCarrito = (carrito) => {
 const eliminarArticuloCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
-    
     actualizarTotalCarrito(carritoActualizado);
     pintarCarrito(carritoActualizado);
-}
+};
 
 
 
-export { agregarAlCarrito, validarArticuloRepetido, pintarCarrito, eliminarArticuloCarrito};
+
+
+
+export { agregarAlCarrito, validarArticuloRepetido, pintarCarrito, eliminarArticuloCarrito };
+
+
+
+

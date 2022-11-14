@@ -16,7 +16,7 @@ const pintarTotalesCarrito = (totalCantidad, totalCompra) => {
     precioTotal.innerText = totalCompra;
 };
 
-export { actualizarTotalCarrito };
+export { actualizarTotalCarrito, pintarTotalesCarrito };
 
 
 
