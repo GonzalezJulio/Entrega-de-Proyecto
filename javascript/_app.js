@@ -1,6 +1,6 @@
 import { validarArticuloRepetido } from "./_accionesCarrito.js";
 import { obtenerArticulos } from "./_obtenerProductos.js";
-
+// Esta funcion sirve para mostrar los articulos en el html.
 const mostrarArticulos = async () => {
     
     const almacenamientoArticulos = document.getElementById ("producto-contenedor");

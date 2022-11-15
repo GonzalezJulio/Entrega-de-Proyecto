@@ -4,6 +4,7 @@ const userSurname = document.getElementById('userSurname');
 const userEmail = document.getElementById('userEmail');
 const userSugerencias = document.getElementById('userSuggestions');
 
+// formulario para enviar las sugerencias de los usuarios
 
 const sendEmail = async (body) => {
     const settings = {
@@ -14,7 +15,7 @@ const sendEmail = async (body) => {
         body: JSON.stringify(body),
     }
     
-    const response = await fetch(' https://api.emailjs.com/api/v1.0/email/send', settings);
+    const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', settings);
     const data = await response.json();
     return data;
 };

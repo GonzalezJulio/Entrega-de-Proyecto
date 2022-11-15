@@ -1,3 +1,5 @@
+// JSON para recibir los articulos
+
 const obtenerArticulos = async () => {
     try {
         const response = await fetch('../javascript/data/stock.json');

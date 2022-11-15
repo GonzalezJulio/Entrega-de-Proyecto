@@ -1,20 +1,22 @@
+// improtaciones de funciones 
 import { actualizarTotalCarrito } from './_actualizarCarrito.js';
 import { obtenerArticulos } from './_obtenerProductos.js';
 import { obtenerCarritoStorage } from './storage.js';
 
-
+// llamado de id de HTML para generar una const 
 const vaciarCarrito = document.querySelector("#comprar-carrito");
 let carrito = [];
- 
+// funciones de vaciar carrito
 vaciarCarrito.addEventListener("click", () => {
     carrito.length = [];
     pintarCarrito(actualizarTotalCarrito(carrito));
+    
     
 })
 
 
 
-
+// funcion para verificar que el carrito sume lo productos repetidos
 function validarArticuloRepetido(productoId) {
 
     if (localStorage.getItem('carrito')) {
@@ -33,7 +35,7 @@ function validarArticuloRepetido(productoId) {
 
 }
 
-
+// funcion para agregar los productos
 const agregarAlCarrito = async (productoId) => {
     const contenedor = document.getElementById('carrito-contenedor');
     const productos = await obtenerArticulos();
@@ -49,7 +51,7 @@ const agregarAlCarrito = async (productoId) => {
     contenedor.appendChild(div);
     actualizarTotalCarrito(carrito);
 };
-
+// funcion de como aparecen los productos en el modal
 const pintarCarrito = (carrito) => {
     const contenedor = document.getElementById('carrito-contenedor');
     
@@ -67,7 +69,7 @@ const pintarCarrito = (carrito) => {
     });
 };
 
-
+// para eliminar los articulos en el modal
 const eliminarArticuloCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
